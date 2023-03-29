@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "samudra-gui"
+version = "0.1.0"
+description = ""
+authors = ["Thaza_Kun <61819672+Thaza-Kun@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "samudra_gui"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Kivy = "^2.1.0"
+kivymd = "^1.1.1"
+samudra = {git = "https://github.com/samudradev/samudra.git"}
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,25 @@
+#:kivy 1.0.9
+
+BoxLayout:
+    orientation: 'vertical'
+    pos_hint: {'center_x': 0.5,'center_y': 0.5}
+    adaptive_size: True
+    BoxLayout:
+        orientation: 'horizontal'
+        MDTextField:
+            mode: 'rectangle'
+            hint_text: 'testing'
+        MDIconButton:
+            icon: 'magnify'
+    MDCard:
+        MDRelativeLayout:
+            MDIconButton:
+                id: menu_button
+                icon: "dots-vertical"
+                pos_hint: {"top": 1, "right": 1}
+                on_release: app.menu.open()
+            MDLabel:
+                text: "text"
+                color: 'black'
+                adaptive_size: True
+                pos_hint: {'center_x': 0.5,'center_y': 0.5}
