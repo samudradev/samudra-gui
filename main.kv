@@ -1,16 +1,20 @@
 #:kivy 1.0.9
 
 BoxLayout:
+    lemma_field:lemma_field
+    
     orientation: 'vertical'
     pos_hint: {'center_x': 0.5,'center_y': 0.5}
     adaptive_size: True
     BoxLayout:
         orientation: 'horizontal'
         MDTextField:
+            id: lemma_field
             mode: 'rectangle'
             hint_text: 'testing'
         MDIconButton:
             icon: 'magnify'
+            on_release: app.search()
     MDCard:
         MDRelativeLayout:
             MDIconButton:
