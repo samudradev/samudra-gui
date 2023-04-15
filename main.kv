@@ -1,15 +1,15 @@
 #:kivy 1.0.9
 
-<Main>:
-    lemma_data_konsep: lemma_data_konsep
-    lemma_data_heading: lemma_data_heading
-    lemma_data_golongan_kata: lemma_data_golongan_kata
-    
-BoxLayout:
+<MDBoxLayout>:
     orientation: 'vertical'
     pos_hint: {'center_x': 0.5,'center_y': 0.5}
-    adaptive_size: True
-    BoxLayout:
+    spacing: 0.5
+    
+<MDChip>:
+    line_color: app.theme_cls.disabled_hint_text_color
+
+MDBoxLayout:
+    MDBoxLayout:
         orientation: 'horizontal'
         MDTextField:
             id: lemma_field
@@ -25,24 +25,5 @@ BoxLayout:
                 icon: "dots-vertical"
                 pos_hint: {"top": 1, "right": 1}
                 on_release: app.menu.open()
-            BoxLayout:
-                orientation: 'vertical'
-                pos_hint: {'center_x': 0.5,'center_y': 0.5}
-                # TODO Extract as a class for more dynamic handling
-                MDLabel:
-                    text: app.lemma_data_heading
-                    text_size: root.size
-                    font_style: 'H3'
-                MDChip:
-                    text: app.lemma_data_golongan_kata
-                    line_color: app.theme_cls.disabled_hint_text_color
-                MDLabel:
-                    text: app.lemma_data_konsep
-                    text_size: root.size
-                    color: 'black'
-                    adaptive_size: True
-                    halign: 'center'
-                    valign: 'middle'
-                MDChip:
-                    text: app.lemma_data_cakupan
-                    line_color: app.theme_cls.disabled_hint_text_color
+            DataCard:
+                id: datacard
