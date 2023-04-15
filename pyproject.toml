@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "samudra-gui"
-version = "0.1.1"
+version = "0.1.2"
 description = ""
 authors = ["Thaza_Kun <61819672+Thaza-Kun@users.noreply.github.com>"]
 readme = "README.md"
@@ -10,7 +10,7 @@ packages = [{include = "samudra_gui"}]
 python = "^3.8"
 Kivy = "^2.1.0"
 kivymd = "^1.1.1"
-samudra = {git = "https://github.com/samudradev/samudra.git", tag="v0.9.3"}
+samudra = {git = "https://github.com/samudradev/samudra.git"}
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.1.0"
