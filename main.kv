@@ -2,15 +2,27 @@
 
 <MDBoxLayout>:
     orientation: 'vertical'
-    pos_hint: {'center_x': 0.5,'center_y': 0.5}
-    spacing: 0.5
+    minimum_width: 100
+    # pos_hint: {'center_x': 0.5,'center_y': 0.5}
     
 <MDChip>:
     line_color: app.theme_cls.disabled_hint_text_color
 
+<MDLabel>:
+    adaptive_height: True
+    minimum_height: 30
+
 MDBoxLayout:
+    valign: 'center'
+    orientation: "vertical"
+    # adaptive_size: True
+    # pos_hint: {"center_x": 1, "center_y": 1}
+    
     MDBoxLayout:
         orientation: 'horizontal'
+        adaptive_height: True
+        minimum_height: 60
+        padding: 30, 10
         MDTextField:
             id: lemma_field
             mode: 'rectangle'
@@ -18,12 +30,16 @@ MDBoxLayout:
         MDIconButton:
             icon: 'magnify'
             on_release: app.search()
-    MDCard:
-        MDRelativeLayout:
-            MDIconButton:
-                id: menu_button
-                icon: "dots-vertical"
-                pos_hint: {"top": 1, "right": 1}
-                on_release: app.menu.open()
-            DataCard:
-                id: datacard
+    AnchorLayout:
+        anchor_x: 'center'
+        anchor_y: 'center'        
+        padding: 25, 10, 25, 25
+        MDCard:
+            MDRelativeLayout:
+                MDIconButton:
+                    id: menu_button
+                    icon: "dots-vertical"
+                    pos_hint: {"top": 1, "right": 1}
+                    on_release: app.menu.open()
+                DataCard:
+                    id: datacard
