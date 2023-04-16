@@ -18,7 +18,7 @@ Apabila sudah stabil, insyaAllah boleh pasang secara `.exe` terus.
 2. Dapatkan pakej-pakej yang diperlukan menggunakan [poetry](https://python-poetry.org/)
     ```bash
     poetry install
-    ``
+    ```
 
 3. Laksanakan aplikasi
     ```bash
